@@ -42,6 +42,14 @@
         [self.tableView reloadData];
     } failed:^(AFHTTPRequestOperation *operation, NSError *error) {
         [SVProgressHUD dismiss];
+        
+        // try to get local friends
+        NSArray *localFriends = [Friend MR_findAll];
+        if (localFriends.count > 0) {
+            self.friends = localFriends;
+            [self.tableView reloadData];
+        }
+        
         [[[UIAlertView alloc] initWithTitle:@"Server error" message:@"Please try next time" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     }];
 }
