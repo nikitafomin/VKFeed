@@ -15,6 +15,8 @@
 - (NSURL *)signInURL;
 
 - (void)saveAccessToken:(NSString *)token userID:(NSString *)userID;
+- (NSString *)accessToken;
+- (NSString *)userID;
 
 - (BOOL)isUserAuthenticate;
 - (void)logout;

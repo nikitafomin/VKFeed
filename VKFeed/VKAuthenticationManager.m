@@ -36,16 +36,22 @@
 }
 
 - (void)saveAccessToken:(NSString *)token userID:(NSString *)userID {
-    [[NSUserDefaults standardUserDefaults] setObject:token forKey:kAccessToken];
-    [[NSUserDefaults standardUserDefaults] setObject:userID forKey:kUserID];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [SSKeychain setPassword:token forService:kKeychainService account:kAccessToken];
+    [SSKeychain setPassword:userID forService:kKeychainService account:kUserID];
+}
+
+- (NSString *)accessToken {
+    return [SSKeychain passwordForService:kKeychainService account:kAccessToken];
+}
+
+- (NSString *)userID {
+    return [SSKeychain passwordForService:kKeychainService account:kUserID];
 }
 
 - (void)logout {
     if ([self isUserAuthenticate]) {
-        [[NSUserDefaults standardUserDefaults] removeObjectForKey:kAccessToken];
-        [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUserID];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+        [SSKeychain deletePasswordForService:kKeychainService account:kAccessToken];
+        [SSKeychain deletePasswordForService:kKeychainService account:kUserID];
     }
 }
 

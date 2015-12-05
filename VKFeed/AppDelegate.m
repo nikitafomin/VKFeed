@@ -31,6 +31,9 @@
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
+    // SSKeychain
+    [SSKeychain setAccessibilityType:kSecAttrAccessibleWhenUnlocked];
+    
     
     [self showNeededViewController];
     

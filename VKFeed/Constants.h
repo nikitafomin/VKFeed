@@ -8,8 +8,12 @@
 
 /*----------Keys---------*/
 static NSString *const kVKAppID = @"5176134";
+
 static NSString *const kAccessToken = @"kAccessToken";
 static NSString *const kUserID = @"kUserID";
+
+static NSString *const kKeychainService = @"kKeychainServiceVKFeed";
+
 
 
 
