@@ -18,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [[APIManager sharedManager] getFriends:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //<#code#>
+    } failed:^(AFHTTPRequestOperation *operation, NSError *error, BOOL isCancelled) {
+        //<#code#>
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

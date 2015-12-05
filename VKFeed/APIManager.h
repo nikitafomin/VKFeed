@@ -10,6 +10,15 @@
 
 @interface APIManager : NSObject
 
+@property (nonatomic, readonly) AFHTTPRequestOperationManager *operationManager;
+
+
 + (instancetype)sharedManager;
+
+
+
+#pragma mark - GET methods
+
+- (AFHTTPRequestOperation *)getFriends:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failed:(void (^)(AFHTTPRequestOperation *operation, NSError *error, BOOL isCancelled))failed;
 
 @end

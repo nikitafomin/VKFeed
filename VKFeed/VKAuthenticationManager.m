@@ -20,7 +20,7 @@
 }
 
 - (BOOL)isUserAuthenticate {
-    return ([[NSUserDefaults standardUserDefaults] stringForKey:kAccessToken].length > 0);
+    return ([self accessToken].length > 0 && [self userID].length > 0);
 }
 
 - (NSURL *)signInURL {

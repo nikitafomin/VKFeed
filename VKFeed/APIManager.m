@@ -7,6 +7,7 @@
 //
 
 #import "APIManager.h"
+#import "VKAuthenticationManager.h"
 
 @implementation APIManager
 
@@ -17,6 +18,50 @@
         sharedInstance = [[self alloc] init];
     });
     return sharedInstance;
+}
+
+- (NSURL *)baseURL {
+    static dispatch_once_t once;
+    static NSURL *url;
+    dispatch_once(&once, ^{
+        url = [NSURL URLWithString:@"https://api.vk.com/method/"];
+    });
+    return url;
+}
+
+- (NSMutableDictionary *)baseParams {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:[[VKAuthenticationManager sharedManager] userID] forKey:@"user_id"];
+    [params setObject:[[VKAuthenticationManager sharedManager] accessToken] forKey:@"access_token"];
+    return params;
+}
+
+- (AFHTTPRequestOperationManager *)operationManager {
+    static dispatch_once_t once;
+    static AFHTTPRequestOperationManager *manager;
+    dispatch_once(&once, ^{
+        manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[self baseURL]];
+        manager.requestSerializer = [AFJSONRequestSerializer serializerWithWritingOptions:NSJSONWritingPrettyPrinted];
+        manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
+    });
+    return manager;
+}
+
+#pragma mark - GET methods
+
+- (AFHTTPRequestOperation *)getFriends:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failed:(void (^)(AFHTTPRequestOperation *operation, NSError *error, BOOL isCancelled))failed
+{
+    NSMutableDictionary *params = [self baseParams];
+    [params setObject:@"hints" forKey:@"order"];
+    [params setObject:@"nickname,city,country,photo_200_orig" forKey:@"fields"];
+    
+    AFHTTPRequestOperation *operaton = [self.operationManager GET:@"friends.get" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        DLog(@"%@",responseObject);
+    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+        DLog(@"Get Friends error - %@",error);
+    }];
+    
+    return operaton;
 }
 
 @end
