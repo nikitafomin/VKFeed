@@ -11,7 +11,9 @@
 @implementation FriendsTableViewCell
 
 - (void)configureWithFriend:(Friend *)friendObj {
-    
+    [self.friendImageView sd_setImageWithURL:friendObj.urlForPhoto placeholderImage:[UIImage imageNamed:@"default-avatar"]];
+    self.firstNameLabel.text = friendObj.firstName;
+    self.lastNameLabel.text = friendObj.lastName;
 }
 
 @end

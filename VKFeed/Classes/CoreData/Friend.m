@@ -8,6 +8,8 @@
 
 @implementation Friend
 
-// Custom logic goes here.
+- (NSURL *)urlForPhoto {
+    return [NSURL URLWithString:self.imageURL];
+}
 
 @end

@@ -11,9 +11,9 @@
 
 @interface FriendsTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *friendPhoto;
-@property (weak, nonatomic) IBOutlet UILabel *firstName;
-@property (weak, nonatomic) IBOutlet UILabel *lastName;
+@property (weak, nonatomic) IBOutlet UIImageView *friendImageView;
+@property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lastNameLabel;
 
 - (void)configureWithFriend:(Friend *)friendObj;
 

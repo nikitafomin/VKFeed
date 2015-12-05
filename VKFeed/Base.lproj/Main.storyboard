@@ -21,7 +21,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IcE-Hp-gry">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IcE-Hp-gry">
                                             <rect key="frame" x="8" y="12" width="55" height="55"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="55" id="kHT-gr-gs4"/>
@@ -58,9 +58,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="firstName" destination="9Xz-lb-dD7" id="tsM-yp-YiU"/>
-                                    <outlet property="friendPhoto" destination="IcE-Hp-gry" id="LW9-Yi-Ros"/>
-                                    <outlet property="lastName" destination="C8V-46-3sR" id="jVZ-xU-jLY"/>
+                                    <outlet property="firstNameLabel" destination="9Xz-lb-dD7" id="vhR-Xo-hc7"/>
+                                    <outlet property="friendImageView" destination="IcE-Hp-gry" id="Iyu-dg-KfP"/>
+                                    <outlet property="lastNameLabel" destination="C8V-46-3sR" id="Z4i-7D-X2s"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
