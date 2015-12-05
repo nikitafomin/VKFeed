@@ -8,6 +8,7 @@
 
 #import "APIManager.h"
 #import "VKAuthenticationManager.h"
+#import "Friend.h"
 
 @implementation APIManager
 
@@ -49,7 +50,7 @@
 
 #pragma mark - GET methods
 
-- (AFHTTPRequestOperation *)getFriends:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failed:(void (^)(AFHTTPRequestOperation *operation, NSError *error, BOOL isCancelled))failed
+- (AFHTTPRequestOperation *)getFriends:(void (^)(NSArray *friends))success failed:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failed
 {
     NSMutableDictionary *params = [self baseParams];
     [params setObject:@"hints" forKey:@"order"];
@@ -57,8 +58,13 @@
     
     AFHTTPRequestOperation *operaton = [self.operationManager GET:@"friends.get" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         DLog(@"%@",responseObject);
+        [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext) {
+            [Friend MR_importFromArray:[responseObject objectForKey:@"response"] inContext:localContext];
+        }];
+        success([Friend MR_findAll]);
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         DLog(@"Get Friends error - %@",error);
+        failed(operaton, error);
     }];
     
     return operaton;

@@ -4,9 +4,14 @@
 #import "_Friend.h"
 
 const struct FriendAttributes FriendAttributes = {
+	.firstName = @"firstName",
 	.id = @"id",
-	.image = @"image",
-	.name = @"name",
+	.imageURL = @"imageURL",
+	.lastName = @"lastName",
+};
+
+const struct FriendUserInfo FriendUserInfo = {
+	.relatedByAttribute = @"user_id",
 };
 
 @implementation FriendID
@@ -44,6 +49,8 @@ const struct FriendAttributes FriendAttributes = {
 	return keyPaths;
 }
 
+@dynamic firstName;
+
 @dynamic id;
 
 - (int64_t)idValue {
@@ -64,9 +71,9 @@ const struct FriendAttributes FriendAttributes = {
 	[self setPrimitiveId:[NSNumber numberWithLongLong:value_]];
 }
 
-@dynamic image;
+@dynamic imageURL;
 
-@dynamic name;
+@dynamic lastName;
 
 @end
 

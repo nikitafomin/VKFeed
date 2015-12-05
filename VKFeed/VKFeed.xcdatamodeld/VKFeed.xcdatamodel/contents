@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F1021" minimumToolsVersion="Automatic">
     <entity name="Friend" representedClassName="Friend" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="first_name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="user_id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="photo_200_orig"/>
+            </userInfo>
+        </attribute>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="last_name"/>
+            </userInfo>
+        </attribute>
+        <userInfo>
+            <entry key="relatedByAttribute" value="user_id"/>
+        </userInfo>
     </entity>
     <elements>
-        <element name="Friend" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Friend" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>

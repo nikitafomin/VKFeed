@@ -4,10 +4,15 @@
 #import <CoreData/CoreData.h>
 
 extern const struct FriendAttributes {
+	__unsafe_unretained NSString *firstName;
 	__unsafe_unretained NSString *id;
-	__unsafe_unretained NSString *image;
-	__unsafe_unretained NSString *name;
+	__unsafe_unretained NSString *imageURL;
+	__unsafe_unretained NSString *lastName;
 } FriendAttributes;
+
+extern const struct FriendUserInfo {
+	__unsafe_unretained NSString *relatedByAttribute;
+} FriendUserInfo;
 
 @interface FriendID : NSManagedObjectID {}
 @end
@@ -18,6 +23,10 @@ extern const struct FriendAttributes {
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 @property (nonatomic, readonly, strong) FriendID* objectID;
 
+@property (nonatomic, strong) NSString* firstName;
+
+//- (BOOL)validateFirstName:(id*)value_ error:(NSError**)error_;
+
 @property (nonatomic, strong) NSNumber* id;
 
 @property (atomic) int64_t idValue;
@@ -26,17 +35,20 @@ extern const struct FriendAttributes {
 
 //- (BOOL)validateId:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSString* image;
+@property (nonatomic, strong) NSString* imageURL;
 
-//- (BOOL)validateImage:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateImageURL:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSString* name;
+@property (nonatomic, strong) NSString* lastName;
 
-//- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateLastName:(id*)value_ error:(NSError**)error_;
 
 @end
 
 @interface _Friend (CoreDataGeneratedPrimitiveAccessors)
+
+- (NSString*)primitiveFirstName;
+- (void)setPrimitiveFirstName:(NSString*)value;
 
 - (NSNumber*)primitiveId;
 - (void)setPrimitiveId:(NSNumber*)value;
@@ -44,10 +56,10 @@ extern const struct FriendAttributes {
 - (int64_t)primitiveIdValue;
 - (void)setPrimitiveIdValue:(int64_t)value_;
 
-- (NSString*)primitiveImage;
-- (void)setPrimitiveImage:(NSString*)value;
+- (NSString*)primitiveImageURL;
+- (void)setPrimitiveImageURL:(NSString*)value;
 
-- (NSString*)primitiveName;
-- (void)setPrimitiveName:(NSString*)value;
+- (NSString*)primitiveLastName;
+- (void)setPrimitiveLastName:(NSString*)value;
 
 @end

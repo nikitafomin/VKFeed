@@ -11,6 +11,8 @@
 
 @interface FriendsTableViewController ()
 
+@property (nonatomic, strong) NSArray *friends;
+
 @end
 
 @implementation FriendsTableViewController
@@ -21,11 +23,27 @@
     // auto cell height
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 80;
+    
+    [self refresh];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Actions
+
+- (void)refresh {
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+    [[APIManager sharedManager] getFriends:^(NSArray *friends) {
+        [SVProgressHUD dismiss];
+        self.friends = friends;
+        [self.tableView reloadData];
+    } failed:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [SVProgressHUD dismiss];
+        [[[UIAlertView alloc] initWithTitle:@"Server error" message:@"Please try next time" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    }];
 }
 
 #pragma mark - Table view data source
@@ -35,13 +53,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.friends.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FriendsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([FriendsTableViewCell class]) forIndexPath:indexPath];
     
-    [cell configureWithFriend:nil];
+    [cell configureWithFriend:self.friends[indexPath.row]];
     
     return cell;
 }

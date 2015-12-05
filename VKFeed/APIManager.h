@@ -19,6 +19,6 @@
 
 #pragma mark - GET methods
 
-- (AFHTTPRequestOperation *)getFriends:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failed:(void (^)(AFHTTPRequestOperation *operation, NSError *error, BOOL isCancelled))failed;
+- (AFHTTPRequestOperation *)getFriends:(void (^)(NSArray *friends))success failed:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failed;
 
 @end
