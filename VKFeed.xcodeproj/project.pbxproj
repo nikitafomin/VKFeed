@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		19CEB2921C130C00003BCB3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2911C130C00003BCB3C /* main.m */; };
 		19CEB2951C130C00003BCB3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2941C130C00003BCB3C /* AppDelegate.m */; };
-		19CEB2981C130C00003BCB3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2971C130C00003BCB3C /* ViewController.m */; };
 		19CEB29B1C130C00003BCB3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CEB2991C130C00003BCB3C /* Main.storyboard */; };
 		19CEB29E1C130C00003BCB3C /* VKFeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB29C1C130C00003BCB3C /* VKFeed.xcdatamodeld */; };
 		19CEB2A01C130C00003BCB3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CEB29F1C130C00003BCB3C /* Assets.xcassets */; };
@@ -21,6 +20,9 @@
 		19CEB2DC1C132C6F003BCB3C /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2DB1C132C6F003BCB3C /* APIManager.m */; };
 		19CEB2E11C1331E7003BCB3C /* VKAuthenticationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2E01C1331E7003BCB3C /* VKAuthenticationManager.m */; };
 		19CEB2E81C135869003BCB3C /* AuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2E71C135869003BCB3C /* AuthenticationViewController.m */; };
+		19CEB2EB1C138D1C003BCB3C /* FriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2EA1C138D1C003BCB3C /* FriendsTableViewController.m */; };
+		19CEB2EF1C138D70003BCB3C /* FriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2EE1C138D70003BCB3C /* FriendsTableViewCell.m */; };
+		19CEB2F31C1392D1003BCB3C /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2F21C1392D1003BCB3C /* RootNavigationController.m */; };
 		5BA82F9773EC0B1ACBE006E6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FAA7DABB01DEBC32266F58 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +71,6 @@
 		19CEB2911C130C00003BCB3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19CEB2931C130C00003BCB3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19CEB2941C130C00003BCB3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		19CEB2961C130C00003BCB3C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		19CEB2971C130C00003BCB3C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		19CEB29A1C130C00003BCB3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19CEB29D1C130C00003BCB3C /* VKFeed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VKFeed.xcdatamodel; sourceTree = "<group>"; };
 		19CEB29F1C130C00003BCB3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +95,12 @@
 		19CEB2E01C1331E7003BCB3C /* VKAuthenticationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKAuthenticationManager.m; sourceTree = "<group>"; };
 		19CEB2E61C135869003BCB3C /* AuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationViewController.h; sourceTree = "<group>"; };
 		19CEB2E71C135869003BCB3C /* AuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationViewController.m; sourceTree = "<group>"; };
+		19CEB2E91C138D1C003BCB3C /* FriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewController.h; sourceTree = "<group>"; };
+		19CEB2EA1C138D1C003BCB3C /* FriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewController.m; sourceTree = "<group>"; };
+		19CEB2ED1C138D70003BCB3C /* FriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewCell.h; sourceTree = "<group>"; };
+		19CEB2EE1C138D70003BCB3C /* FriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewCell.m; sourceTree = "<group>"; };
+		19CEB2F11C1392D1003BCB3C /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
+		19CEB2F21C1392D1003BCB3C /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 		3B8F337981A221F5F50D83E1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		65FAA7DABB01DEBC32266F58 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2E6493539E27F6670D4317 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -240,9 +246,9 @@
 		19CEB2D71C1320D9003BCB3C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				19CEB2961C130C00003BCB3C /* ViewController.h */,
-				19CEB2971C130C00003BCB3C /* ViewController.m */,
+				19CEB2F01C1392A3003BCB3C /* Navigation */,
 				19CEB2E51C135817003BCB3C /* Authentication */,
+				19CEB2EC1C138D27003BCB3C /* Friends */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -274,6 +280,26 @@
 				19CEB2E01C1331E7003BCB3C /* VKAuthenticationManager.m */,
 			);
 			name = Authentication;
+			sourceTree = "<group>";
+		};
+		19CEB2EC1C138D27003BCB3C /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				19CEB2E91C138D1C003BCB3C /* FriendsTableViewController.h */,
+				19CEB2EA1C138D1C003BCB3C /* FriendsTableViewController.m */,
+				19CEB2ED1C138D70003BCB3C /* FriendsTableViewCell.h */,
+				19CEB2EE1C138D70003BCB3C /* FriendsTableViewCell.m */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
+		19CEB2F01C1392A3003BCB3C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				19CEB2F11C1392D1003BCB3C /* RootNavigationController.h */,
+				19CEB2F21C1392D1003BCB3C /* RootNavigationController.m */,
+			);
+			name = Navigation;
 			sourceTree = "<group>";
 		};
 		7D400B51F90485D5EDDD6E7B /* Pods */ = {
@@ -477,11 +503,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				19CEB2E11C1331E7003BCB3C /* VKAuthenticationManager.m in Sources */,
+				19CEB2EF1C138D70003BCB3C /* FriendsTableViewCell.m in Sources */,
 				19CEB29E1C130C00003BCB3C /* VKFeed.xcdatamodeld in Sources */,
 				19CEB2D61C131940003BCB3C /* _Friend.m in Sources */,
+				19CEB2EB1C138D1C003BCB3C /* FriendsTableViewController.m in Sources */,
+				19CEB2F31C1392D1003BCB3C /* RootNavigationController.m in Sources */,
 				19CEB2D11C1318E3003BCB3C /* Friend.m in Sources */,
 				19CEB2E81C135869003BCB3C /* AuthenticationViewController.m in Sources */,
-				19CEB2981C130C00003BCB3C /* ViewController.m in Sources */,
 				19CEB2DC1C132C6F003BCB3C /* APIManager.m in Sources */,
 				19CEB2951C130C00003BCB3C /* AppDelegate.m in Sources */,
 				19CEB2921C130C00003BCB3C /* main.m in Sources */,

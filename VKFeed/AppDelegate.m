@@ -67,7 +67,7 @@
 
 - (void)showNeededViewController {
     
-    NSString *identifer = [[VKAuthenticationManager sharedManager] isUserAuthenticate] ? @"ViewController" : @"AuthenticationViewController";
+    NSString *identifer = [[VKAuthenticationManager sharedManager] isUserAuthenticate] ? @"RootNavigationController" : @"AuthenticationViewController";
     
     UIStoryboard *storyboard = self.window.rootViewController.storyboard;
     UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:identifer];
