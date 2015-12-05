@@ -16,8 +16,33 @@
 		19CEB2A31C130C00003BCB3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CEB2A11C130C00003BCB3C /* LaunchScreen.storyboard */; };
 		19CEB2AE1C130C00003BCB3C /* VKFeedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2AD1C130C00003BCB3C /* VKFeedTests.m */; };
 		19CEB2B91C130C00003BCB3C /* VKFeedUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2B81C130C00003BCB3C /* VKFeedUITests.m */; };
+		19CEB2D11C1318E3003BCB3C /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2D01C1318E3003BCB3C /* Friend.m */; };
+		19CEB2D61C131940003BCB3C /* _Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2D51C131940003BCB3C /* _Friend.m */; };
 		5BA82F9773EC0B1ACBE006E6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FAA7DABB01DEBC32266F58 /* libPods.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		19CEB2CB1C13163D003BCB3C /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = wrapper.xcdatamodel;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILES_DIR)/$(INPUT_FILE_BASE).momd",
+			);
+			script = "echo \"Running mogend (Data model files)\"\n\"${PROJECT_DIR}/Scripts/mogend.sh";
+		};
+		19CEB2CC1C131682003BCB3C /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = wrapper.xcdatamodeld;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILES_DIR)/$(INPUT_FILE_BASE).momd",
+			);
+			script = "echo \"Running mogend (Data model version files)\"\n\"${PROJECT_DIR}/Scripts/mogend.sh\"";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		19CEB2AA1C130C00003BCB3C /* PBXContainerItemProxy */ = {
@@ -54,6 +79,11 @@
 		19CEB2B41C130C00003BCB3C /* VKFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CEB2B81C130C00003BCB3C /* VKFeedUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKFeedUITests.m; sourceTree = "<group>"; };
 		19CEB2BA1C130C00003BCB3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19CEB2C81C131404003BCB3C /* mogend.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogend.sh; sourceTree = "<group>"; };
+		19CEB2CF1C1318E3003BCB3C /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Friend.h; path = Classes/CoreData/Friend.h; sourceTree = "<group>"; };
+		19CEB2D01C1318E3003BCB3C /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Friend.m; path = Classes/CoreData/Friend.m; sourceTree = "<group>"; };
+		19CEB2D41C131940003BCB3C /* _Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Friend.h; path = Classes/CoreData/Private/_Friend.h; sourceTree = "<group>"; };
+		19CEB2D51C131940003BCB3C /* _Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Friend.m; path = Classes/CoreData/Private/_Friend.m; sourceTree = "<group>"; };
 		3B8F337981A221F5F50D83E1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		65FAA7DABB01DEBC32266F58 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2E6493539E27F6670D4317 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,13 +142,11 @@
 			children = (
 				19CEB2931C130C00003BCB3C /* AppDelegate.h */,
 				19CEB2941C130C00003BCB3C /* AppDelegate.m */,
-				19CEB2961C130C00003BCB3C /* ViewController.h */,
-				19CEB2971C130C00003BCB3C /* ViewController.m */,
-				19CEB2991C130C00003BCB3C /* Main.storyboard */,
 				19CEB29F1C130C00003BCB3C /* Assets.xcassets */,
-				19CEB2A11C130C00003BCB3C /* LaunchScreen.storyboard */,
-				19CEB2A41C130C00003BCB3C /* Info.plist */,
-				19CEB29C1C130C00003BCB3C /* VKFeed.xcdatamodeld */,
+				19CEB2D71C1320D9003BCB3C /* Classes */,
+				19CEB2D81C1320EA003BCB3C /* Storyboards */,
+				19CEB2D91C132113003BCB3C /* API */,
+				19CEB2CD1C1318A1003BCB3C /* CoreData */,
 				19CEB2901C130C00003BCB3C /* Supporting Files */,
 			);
 			path = VKFeed;
@@ -127,7 +155,9 @@
 		19CEB2901C130C00003BCB3C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				19CEB2C71C131404003BCB3C /* Scripts */,
 				19CEB2911C130C00003BCB3C /* main.m */,
+				19CEB2A41C130C00003BCB3C /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -148,6 +178,75 @@
 				19CEB2BA1C130C00003BCB3C /* Info.plist */,
 			);
 			path = VKFeedUITests;
+			sourceTree = "<group>";
+		};
+		19CEB2C71C131404003BCB3C /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				19CEB2C81C131404003BCB3C /* mogend.sh */,
+			);
+			path = Scripts;
+			sourceTree = SOURCE_ROOT;
+		};
+		19CEB2CD1C1318A1003BCB3C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				19CEB2CE1C1318C7003BCB3C /* Model */,
+				19CEB2D21C13191F003BCB3C /* Classes */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		19CEB2CE1C1318C7003BCB3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19CEB29C1C130C00003BCB3C /* VKFeed.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		19CEB2D21C13191F003BCB3C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				19CEB2CF1C1318E3003BCB3C /* Friend.h */,
+				19CEB2D01C1318E3003BCB3C /* Friend.m */,
+				19CEB2D31C131930003BCB3C /* Private */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		19CEB2D31C131930003BCB3C /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				19CEB2D41C131940003BCB3C /* _Friend.h */,
+				19CEB2D51C131940003BCB3C /* _Friend.m */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
+		19CEB2D71C1320D9003BCB3C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				19CEB2961C130C00003BCB3C /* ViewController.h */,
+				19CEB2971C130C00003BCB3C /* ViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		19CEB2D81C1320EA003BCB3C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				19CEB2991C130C00003BCB3C /* Main.storyboard */,
+				19CEB2A11C130C00003BCB3C /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		19CEB2D91C132113003BCB3C /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		7D400B51F90485D5EDDD6E7B /* Pods */ = {
@@ -182,6 +281,8 @@
 				FC0D9CFADA39768C17F9C71F /* Copy Pods Resources */,
 			);
 			buildRules = (
+				19CEB2CC1C131682003BCB3C /* PBXBuildRule */,
+				19CEB2CB1C13163D003BCB3C /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -349,6 +450,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				19CEB29E1C130C00003BCB3C /* VKFeed.xcdatamodeld in Sources */,
+				19CEB2D61C131940003BCB3C /* _Friend.m in Sources */,
+				19CEB2D11C1318E3003BCB3C /* Friend.m in Sources */,
 				19CEB2981C130C00003BCB3C /* ViewController.m in Sources */,
 				19CEB2951C130C00003BCB3C /* AppDelegate.m in Sources */,
 				19CEB2921C130C00003BCB3C /* main.m in Sources */,
