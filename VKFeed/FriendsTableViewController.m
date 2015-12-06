@@ -8,6 +8,7 @@
 
 #import "FriendsTableViewController.h"
 #import "FriendsTableViewCell.h"
+#import "VKAuthenticationManager.h"
 
 @interface FriendsTableViewController ()
 
@@ -52,6 +53,10 @@
         
         [[[UIAlertView alloc] initWithTitle:@"Server error" message:@"Please try next time" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     }];
+}
+
+- (IBAction)logoutTapped:(id)sender {
+    [[VKAuthenticationManager sharedManager] logout];
 }
 
 #pragma mark - Table view data source

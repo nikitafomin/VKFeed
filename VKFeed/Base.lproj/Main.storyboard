@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--Friends Table View Controller-->
+        <!--Friends-->
         <scene sceneID="Rel-XT-1G7">
             <objects>
                 <tableViewController storyboardIdentifier="FriendsTableViewController" id="Ih7-iU-Z4w" customClass="FriendsTableViewController" sceneMemberID="viewController">
@@ -69,7 +69,13 @@
                             <outlet property="delegate" destination="Ih7-iU-Z4w" id="8WE-cR-P1a"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bxJ-wh-dIz"/>
+                    <navigationItem key="navigationItem" title="Friends" id="q1o-gm-yJT">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="kfg-yA-wOV">
+                            <connections>
+                                <action selector="logoutTapped:" destination="Ih7-iU-Z4w" id="W4z-Fm-896"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="600"/>
                 </tableViewController>

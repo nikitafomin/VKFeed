@@ -7,6 +7,7 @@
 //
 
 #import "VKAuthenticationManager.h"
+#import "Friend.h"
 
 @implementation VKAuthenticationManager
 
@@ -52,6 +53,39 @@
     if ([self isUserAuthenticate]) {
         [SSKeychain deletePasswordForService:kKeychainService account:kAccessToken];
         [SSKeychain deletePasswordForService:kKeychainService account:kUserID];
+        
+        
+        // remove cookies
+        [[NSURLCache sharedURLCache] removeAllCachedResponses];
+        NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+        for (NSHTTPCookie *cookie in [storage cookies]) {
+            [storage deleteCookie:cookie];
+        }
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        
+        // reset DB
+        [MagicalRecord cleanUp];
+        
+        NSString *dbStore = [MagicalRecord defaultStoreName];
+        
+        NSURL *storeURL = [NSPersistentStore MR_urlForStoreName:dbStore];
+        NSURL *walURL = [[storeURL URLByDeletingPathExtension] URLByAppendingPathExtension:@"sqlite-wal"];
+        NSURL *shmURL = [[storeURL URLByDeletingPathExtension] URLByAppendingPathExtension:@"sqlite-shm"];
+        
+        NSError *error = nil;
+        
+        for (NSURL *url in @[storeURL, walURL, shmURL]) {
+            if ([[NSFileManager defaultManager] fileExistsAtPath:url.path]) {
+                [[NSFileManager defaultManager] removeItemAtURL:url error:&error];
+            }
+        }
+        
+        [MagicalRecord setupCoreDataStack];
+        
+        
+        // go to authenticate view
+        [ApplicationDelegate showNeededViewController];
     }
 }
 
