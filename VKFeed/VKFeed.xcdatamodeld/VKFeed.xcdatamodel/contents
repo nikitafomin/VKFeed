@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F1021" minimumToolsVersion="Automatic">
     <entity name="City" representedClassName="City" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="cid"/>
+            </userInfo>
+        </attribute>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES">
             <userInfo>
-                <entry key="mappedKeyName" value="title"/>
+                <entry key="mappedKeyName" value="name"/>
             </userInfo>
         </attribute>
         <userInfo>
@@ -12,10 +16,14 @@
         </userInfo>
     </entity>
     <entity name="Country" representedClassName="Country" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="cid"/>
+            </userInfo>
+        </attribute>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES">
             <userInfo>
-                <entry key="mappedKeyName" value="id"/>
+                <entry key="mappedKeyName" value="name"/>
             </userInfo>
         </attribute>
         <userInfo>
