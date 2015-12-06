@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *friendImageView;
 @property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 
 - (void)configureWithFriend:(Friend *)friendObj;
 

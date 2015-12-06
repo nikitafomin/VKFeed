@@ -5,7 +5,10 @@
 @interface Friend : _Friend {}
 
 - (NSURL *)urlForPhoto;
+
 - (City *)city;
 - (Country *)country;
+
+- (NSString *)locationDescription;
 
 @end
