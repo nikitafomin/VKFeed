@@ -11,7 +11,7 @@ const struct FriendAttributes FriendAttributes = {
 };
 
 const struct FriendUserInfo FriendUserInfo = {
-	.relatedByAttribute = @"user_id",
+	.relatedByAttribute = @"id",
 };
 
 @implementation FriendID

@@ -22,7 +22,7 @@
             </userInfo>
         </attribute>
         <userInfo>
-            <entry key="relatedByAttribute" value="user_id"/>
+            <entry key="relatedByAttribute" value="id"/>
         </userInfo>
     </entity>
     <elements>
