@@ -59,9 +59,14 @@
     AFHTTPRequestOperation *operaton = [self.operationManager GET:@"friends.get" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         DLog(@"%@",responseObject);
         [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext) {
-            [Friend MR_importFromArray:[responseObject objectForKey:@"response"] inContext:localContext];
+            NSArray *friends = [responseObject objectForKey:@"response"];
+            for (int i = 0; i < friends.count; i++) {
+                NSDictionary *responseFriend = friends[i];
+                Friend *friend = [Friend MR_importFromObject:responseFriend inContext:localContext];
+                friend.orderValue = i;
+            }
         }];
-        success([Friend MR_findAll]);
+        success([Friend MR_findAllSortedBy:@"order" ascending:YES]);
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         DLog(@"Get Friends error - %@",error);
         failed(operaton, error);

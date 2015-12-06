@@ -8,6 +8,7 @@ extern const struct FriendAttributes {
 	__unsafe_unretained NSString *id;
 	__unsafe_unretained NSString *imageURL;
 	__unsafe_unretained NSString *lastName;
+	__unsafe_unretained NSString *order;
 } FriendAttributes;
 
 extern const struct FriendUserInfo {
@@ -43,6 +44,14 @@ extern const struct FriendUserInfo {
 
 //- (BOOL)validateLastName:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) NSNumber* order;
+
+@property (atomic) int64_t orderValue;
+- (int64_t)orderValue;
+- (void)setOrderValue:(int64_t)value_;
+
+//- (BOOL)validateOrder:(id*)value_ error:(NSError**)error_;
+
 @end
 
 @interface _Friend (CoreDataGeneratedPrimitiveAccessors)
@@ -61,5 +70,11 @@ extern const struct FriendUserInfo {
 
 - (NSString*)primitiveLastName;
 - (void)setPrimitiveLastName:(NSString*)value;
+
+- (NSNumber*)primitiveOrder;
+- (void)setPrimitiveOrder:(NSNumber*)value;
+
+- (int64_t)primitiveOrderValue;
+- (void)setPrimitiveOrderValue:(int64_t)value_;
 
 @end

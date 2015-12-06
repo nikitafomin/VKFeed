@@ -8,6 +8,7 @@ const struct FriendAttributes FriendAttributes = {
 	.id = @"id",
 	.imageURL = @"imageURL",
 	.lastName = @"lastName",
+	.order = @"order",
 };
 
 const struct FriendUserInfo FriendUserInfo = {
@@ -45,6 +46,11 @@ const struct FriendUserInfo FriendUserInfo = {
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
+	if ([key isEqualToString:@"orderValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"order"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
+	}
 
 	return keyPaths;
 }
@@ -74,6 +80,26 @@ const struct FriendUserInfo FriendUserInfo = {
 @dynamic imageURL;
 
 @dynamic lastName;
+
+@dynamic order;
+
+- (int64_t)orderValue {
+	NSNumber *result = [self order];
+	return [result longLongValue];
+}
+
+- (void)setOrderValue:(int64_t)value_ {
+	[self setOrder:[NSNumber numberWithLongLong:value_]];
+}
+
+- (int64_t)primitiveOrderValue {
+	NSNumber *result = [self primitiveOrder];
+	return [result longLongValue];
+}
+
+- (void)setPrimitiveOrderValue:(int64_t)value_ {
+	[self setPrimitiveOrder:[NSNumber numberWithLongLong:value_]];
+}
 
 @end
 

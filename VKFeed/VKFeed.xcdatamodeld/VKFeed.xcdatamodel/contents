@@ -21,11 +21,12 @@
                 <entry key="mappedKeyName" value="last_name"/>
             </userInfo>
         </attribute>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <userInfo>
             <entry key="relatedByAttribute" value="id"/>
         </userInfo>
     </entity>
     <elements>
-        <element name="Friend" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Friend" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>
