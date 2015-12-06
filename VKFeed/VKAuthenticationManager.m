@@ -64,6 +64,12 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
         
         
+        // remove cached images
+        SDImageCache *imageCache = [SDImageCache sharedImageCache];
+        [imageCache clearMemory];
+        [imageCache clearDisk];
+        
+        
         // reset DB
         [MagicalRecord cleanUp];
         
