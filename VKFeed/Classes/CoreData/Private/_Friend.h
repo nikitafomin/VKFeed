@@ -4,6 +4,8 @@
 #import <CoreData/CoreData.h>
 
 extern const struct FriendAttributes {
+	__unsafe_unretained NSString *cityID;
+	__unsafe_unretained NSString *countryID;
 	__unsafe_unretained NSString *firstName;
 	__unsafe_unretained NSString *id;
 	__unsafe_unretained NSString *imageURL;
@@ -23,6 +25,22 @@ extern const struct FriendUserInfo {
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 @property (nonatomic, readonly, strong) FriendID* objectID;
+
+@property (nonatomic, strong) NSNumber* cityID;
+
+@property (atomic) int64_t cityIDValue;
+- (int64_t)cityIDValue;
+- (void)setCityIDValue:(int64_t)value_;
+
+//- (BOOL)validateCityID:(id*)value_ error:(NSError**)error_;
+
+@property (nonatomic, strong) NSNumber* countryID;
+
+@property (atomic) int64_t countryIDValue;
+- (int64_t)countryIDValue;
+- (void)setCountryIDValue:(int64_t)value_;
+
+//- (BOOL)validateCountryID:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSString* firstName;
 
@@ -55,6 +73,18 @@ extern const struct FriendUserInfo {
 @end
 
 @interface _Friend (CoreDataGeneratedPrimitiveAccessors)
+
+- (NSNumber*)primitiveCityID;
+- (void)setPrimitiveCityID:(NSNumber*)value;
+
+- (int64_t)primitiveCityIDValue;
+- (void)setPrimitiveCityIDValue:(int64_t)value_;
+
+- (NSNumber*)primitiveCountryID;
+- (void)setPrimitiveCountryID:(NSNumber*)value;
+
+- (int64_t)primitiveCountryIDValue;
+- (void)setPrimitiveCountryIDValue:(int64_t)value_;
 
 - (NSString*)primitiveFirstName;
 - (void)setPrimitiveFirstName:(NSString*)value;

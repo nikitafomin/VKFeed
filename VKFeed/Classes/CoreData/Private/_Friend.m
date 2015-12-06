@@ -4,6 +4,8 @@
 #import "_Friend.h"
 
 const struct FriendAttributes FriendAttributes = {
+	.cityID = @"cityID",
+	.countryID = @"countryID",
 	.firstName = @"firstName",
 	.id = @"id",
 	.imageURL = @"imageURL",
@@ -41,6 +43,16 @@ const struct FriendUserInfo FriendUserInfo = {
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 
+	if ([key isEqualToString:@"cityIDValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"cityID"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
+	}
+	if ([key isEqualToString:@"countryIDValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"countryID"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
+	}
 	if ([key isEqualToString:@"idValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"id"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
@@ -53,6 +65,46 @@ const struct FriendUserInfo FriendUserInfo = {
 	}
 
 	return keyPaths;
+}
+
+@dynamic cityID;
+
+- (int64_t)cityIDValue {
+	NSNumber *result = [self cityID];
+	return [result longLongValue];
+}
+
+- (void)setCityIDValue:(int64_t)value_ {
+	[self setCityID:[NSNumber numberWithLongLong:value_]];
+}
+
+- (int64_t)primitiveCityIDValue {
+	NSNumber *result = [self primitiveCityID];
+	return [result longLongValue];
+}
+
+- (void)setPrimitiveCityIDValue:(int64_t)value_ {
+	[self setPrimitiveCityID:[NSNumber numberWithLongLong:value_]];
+}
+
+@dynamic countryID;
+
+- (int64_t)countryIDValue {
+	NSNumber *result = [self countryID];
+	return [result longLongValue];
+}
+
+- (void)setCountryIDValue:(int64_t)value_ {
+	[self setCountryID:[NSNumber numberWithLongLong:value_]];
+}
+
+- (int64_t)primitiveCountryIDValue {
+	NSNumber *result = [self primitiveCountryID];
+	return [result longLongValue];
+}
+
+- (void)setPrimitiveCountryIDValue:(int64_t)value_ {
+	[self setPrimitiveCountryID:[NSNumber numberWithLongLong:value_]];
 }
 
 @dynamic firstName;

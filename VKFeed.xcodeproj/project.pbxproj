@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19AD60E51C14CF0700A910FF /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AD60E21C14CF0700A910FF /* City.m */; };
+		19AD60E61C14CF0700A910FF /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AD60E41C14CF0700A910FF /* Country.m */; };
+		19AD60EB1C14CF1F00A910FF /* _City.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AD60E81C14CF1F00A910FF /* _City.m */; };
+		19AD60EC1C14CF1F00A910FF /* _Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AD60EA1C14CF1F00A910FF /* _Country.m */; };
 		19CEB2921C130C00003BCB3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2911C130C00003BCB3C /* main.m */; };
 		19CEB2951C130C00003BCB3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2941C130C00003BCB3C /* AppDelegate.m */; };
 		19CEB29B1C130C00003BCB3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CEB2991C130C00003BCB3C /* Main.storyboard */; };
@@ -67,6 +71,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19AD60E11C14CF0700A910FF /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = City.h; path = Classes/CoreData/City.h; sourceTree = "<group>"; };
+		19AD60E21C14CF0700A910FF /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = City.m; path = Classes/CoreData/City.m; sourceTree = "<group>"; };
+		19AD60E31C14CF0700A910FF /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Country.h; path = Classes/CoreData/Country.h; sourceTree = "<group>"; };
+		19AD60E41C14CF0700A910FF /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Country.m; path = Classes/CoreData/Country.m; sourceTree = "<group>"; };
+		19AD60E71C14CF1F00A910FF /* _City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _City.h; path = Classes/CoreData/Private/_City.h; sourceTree = "<group>"; };
+		19AD60E81C14CF1F00A910FF /* _City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _City.m; path = Classes/CoreData/Private/_City.m; sourceTree = "<group>"; };
+		19AD60E91C14CF1F00A910FF /* _Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Country.h; path = Classes/CoreData/Private/_Country.h; sourceTree = "<group>"; };
+		19AD60EA1C14CF1F00A910FF /* _Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Country.m; path = Classes/CoreData/Private/_Country.m; sourceTree = "<group>"; };
 		19CEB28D1C130C00003BCB3C /* VKFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CEB2911C130C00003BCB3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19CEB2931C130C00003BCB3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -227,6 +239,10 @@
 		19CEB2D21C13191F003BCB3C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				19AD60E11C14CF0700A910FF /* City.h */,
+				19AD60E21C14CF0700A910FF /* City.m */,
+				19AD60E31C14CF0700A910FF /* Country.h */,
+				19AD60E41C14CF0700A910FF /* Country.m */,
 				19CEB2CF1C1318E3003BCB3C /* Friend.h */,
 				19CEB2D01C1318E3003BCB3C /* Friend.m */,
 				19CEB2D31C131930003BCB3C /* Private */,
@@ -237,6 +253,10 @@
 		19CEB2D31C131930003BCB3C /* Private */ = {
 			isa = PBXGroup;
 			children = (
+				19AD60E71C14CF1F00A910FF /* _City.h */,
+				19AD60E81C14CF1F00A910FF /* _City.m */,
+				19AD60E91C14CF1F00A910FF /* _Country.h */,
+				19AD60EA1C14CF1F00A910FF /* _Country.m */,
 				19CEB2D41C131940003BCB3C /* _Friend.h */,
 				19CEB2D51C131940003BCB3C /* _Friend.m */,
 			);
@@ -504,11 +524,15 @@
 			files = (
 				19CEB2E11C1331E7003BCB3C /* VKAuthenticationManager.m in Sources */,
 				19CEB2EF1C138D70003BCB3C /* FriendsTableViewCell.m in Sources */,
+				19AD60E51C14CF0700A910FF /* City.m in Sources */,
+				19AD60E61C14CF0700A910FF /* Country.m in Sources */,
 				19CEB29E1C130C00003BCB3C /* VKFeed.xcdatamodeld in Sources */,
 				19CEB2D61C131940003BCB3C /* _Friend.m in Sources */,
+				19AD60EB1C14CF1F00A910FF /* _City.m in Sources */,
 				19CEB2EB1C138D1C003BCB3C /* FriendsTableViewController.m in Sources */,
 				19CEB2F31C1392D1003BCB3C /* RootNavigationController.m in Sources */,
 				19CEB2D11C1318E3003BCB3C /* Friend.m in Sources */,
+				19AD60EC1C14CF1F00A910FF /* _Country.m in Sources */,
 				19CEB2E81C135869003BCB3C /* AuthenticationViewController.m in Sources */,
 				19CEB2DC1C132C6F003BCB3C /* APIManager.m in Sources */,
 				19CEB2951C130C00003BCB3C /* AppDelegate.m in Sources */,
