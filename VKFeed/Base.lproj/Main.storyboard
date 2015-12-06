@@ -75,6 +75,11 @@
                                 <action selector="logoutTapped:" destination="Ih7-iU-Z4w" id="W4z-Fm-896"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="McV-Ma-DPY">
+                            <connections>
+                                <action selector="clearCacheTapped:" destination="Ih7-iU-Z4w" id="w6y-O4-NO4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="600"/>
