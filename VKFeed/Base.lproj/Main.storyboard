@@ -48,11 +48,11 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country, city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F06-G3-gCm">
-                                            <rect key="frame" x="91" y="63" width="97" height="21"/>
+                                            <rect key="frame" x="91" y="55" width="82" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="E4t-RP-eru"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -62,7 +62,7 @@
                                         <constraint firstItem="C8V-46-3sR" firstAttribute="leading" secondItem="IcE-Hp-gry" secondAttribute="trailing" constant="8" id="6JL-Cd-EUN"/>
                                         <constraint firstItem="IcE-Hp-gry" firstAttribute="leading" secondItem="zk2-2A-U8r" secondAttribute="leading" constant="8" id="OTB-TC-qeP"/>
                                         <constraint firstAttribute="bottom" secondItem="IcE-Hp-gry" secondAttribute="bottom" constant="12" id="OjQ-jg-mq4"/>
-                                        <constraint firstItem="F06-G3-gCm" firstAttribute="top" secondItem="C8V-46-3sR" secondAttribute="bottom" constant="8" id="TxV-1U-p8M"/>
+                                        <constraint firstItem="F06-G3-gCm" firstAttribute="top" secondItem="C8V-46-3sR" secondAttribute="bottom" id="TxV-1U-p8M"/>
                                         <constraint firstItem="9Xz-lb-dD7" firstAttribute="top" secondItem="zk2-2A-U8r" secondAttribute="top" constant="12" id="YPm-WA-rhw"/>
                                         <constraint firstItem="IcE-Hp-gry" firstAttribute="top" secondItem="zk2-2A-U8r" secondAttribute="top" constant="12" id="hQh-ms-kod"/>
                                         <constraint firstItem="C8V-46-3sR" firstAttribute="top" secondItem="9Xz-lb-dD7" secondAttribute="bottom" constant="1" id="oHu-Bx-aEV"/>
