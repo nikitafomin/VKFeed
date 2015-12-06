@@ -74,6 +74,7 @@
                                     <outlet property="friendImageView" destination="IcE-Hp-gry" id="Iyu-dg-KfP"/>
                                     <outlet property="lastNameLabel" destination="C8V-46-3sR" id="Z4i-7D-X2s"/>
                                     <outlet property="locationLabel" destination="F06-G3-gCm" id="U4w-iw-lOF"/>
+                                    <segue destination="SDt-gY-wdj" kind="show" id="QWI-yb-MuK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -100,6 +101,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkA-je-II0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="773" y="350"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="hDP-Mt-BU8">
+            <objects>
+                <viewController storyboardIdentifier="FriendDetailViewController" id="SDt-gY-wdj" customClass="FriendDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aIX-EW-W75"/>
+                        <viewControllerLayoutGuide type="bottom" id="WGt-Os-5wk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tH0-wN-XGa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hmW-hM-OUo">
+                                <rect key="frame" x="20" y="72" width="158" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Bh9-F3-RrW"/>
+                                    <constraint firstAttribute="width" constant="158" id="mcF-Hs-Ep6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hmW-hM-OUo" firstAttribute="top" secondItem="aIX-EW-W75" secondAttribute="bottom" constant="8" id="HI6-4N-m7C"/>
+                            <constraint firstAttribute="trailing" secondItem="hmW-hM-OUo" secondAttribute="trailing" constant="20" id="HN3-Ne-Wbh"/>
+                            <constraint firstItem="hmW-hM-OUo" firstAttribute="leading" secondItem="tH0-wN-XGa" secondAttribute="leading" constant="20" id="YFS-zv-2wD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HN3-Ne-Wbh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="HN3-Ne-Wbh"/>
+                                <exclude reference="YFS-zv-2wD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="44w-h8-XVj"/>
+                    <connections>
+                        <outlet property="friendImageView" destination="hmW-hM-OUo" id="ZlV-BO-PFI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KFD-aP-cTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1232" y="350"/>
         </scene>
         <!--Root Navigation Controller-->
         <scene sceneID="7a3-rU-49f">

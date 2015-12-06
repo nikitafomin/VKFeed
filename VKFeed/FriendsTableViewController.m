@@ -9,6 +9,7 @@
 #import "FriendsTableViewController.h"
 #import "FriendsTableViewCell.h"
 #import "VKAuthenticationManager.h"
+#import "FriendDetailViewController.h"
 
 @interface FriendsTableViewController ()
 
@@ -23,7 +24,7 @@
     
     // auto cell height
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 80;
+    self.tableView.estimatedRowHeight = 100;
     
     [self refresh];
 }
@@ -127,14 +128,13 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    FriendDetailViewController *controller = (FriendDetailViewController *)segue.destinationViewController;
+    NSInteger index = [self.tableView indexPathForCell:sender].row;
+    controller.detailedFriend = self.friends[index];
 }
-*/
 
 @end

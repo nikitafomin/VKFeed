@@ -11,6 +11,7 @@
 		19AD60E61C14CF0700A910FF /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AD60E41C14CF0700A910FF /* Country.m */; };
 		19AD60EB1C14CF1F00A910FF /* _City.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AD60E81C14CF1F00A910FF /* _City.m */; };
 		19AD60EC1C14CF1F00A910FF /* _Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AD60EA1C14CF1F00A910FF /* _Country.m */; };
+		19AD60EF1C14E43C00A910FF /* FriendDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AD60EE1C14E43C00A910FF /* FriendDetailViewController.m */; };
 		19CEB2921C130C00003BCB3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2911C130C00003BCB3C /* main.m */; };
 		19CEB2951C130C00003BCB3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2941C130C00003BCB3C /* AppDelegate.m */; };
 		19CEB29B1C130C00003BCB3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CEB2991C130C00003BCB3C /* Main.storyboard */; };
@@ -79,6 +80,8 @@
 		19AD60E81C14CF1F00A910FF /* _City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _City.m; path = Classes/CoreData/Private/_City.m; sourceTree = "<group>"; };
 		19AD60E91C14CF1F00A910FF /* _Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Country.h; path = Classes/CoreData/Private/_Country.h; sourceTree = "<group>"; };
 		19AD60EA1C14CF1F00A910FF /* _Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Country.m; path = Classes/CoreData/Private/_Country.m; sourceTree = "<group>"; };
+		19AD60ED1C14E43C00A910FF /* FriendDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendDetailViewController.h; sourceTree = "<group>"; };
+		19AD60EE1C14E43C00A910FF /* FriendDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendDetailViewController.m; sourceTree = "<group>"; };
 		19CEB28D1C130C00003BCB3C /* VKFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CEB2911C130C00003BCB3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19CEB2931C130C00003BCB3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -144,6 +147,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19AD60F01C14E48B00A910FF /* Friend detail */ = {
+			isa = PBXGroup;
+			children = (
+				19AD60ED1C14E43C00A910FF /* FriendDetailViewController.h */,
+				19AD60EE1C14E43C00A910FF /* FriendDetailViewController.m */,
+			);
+			name = "Friend detail";
+			sourceTree = "<group>";
+		};
 		19CEB2841C130C00003BCB3C = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +281,7 @@
 				19CEB2F01C1392A3003BCB3C /* Navigation */,
 				19CEB2E51C135817003BCB3C /* Authentication */,
 				19CEB2EC1C138D27003BCB3C /* Friends */,
+				19AD60F01C14E48B00A910FF /* Friend detail */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -523,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19CEB2E11C1331E7003BCB3C /* VKAuthenticationManager.m in Sources */,
+				19AD60EF1C14E43C00A910FF /* FriendDetailViewController.m in Sources */,
 				19CEB2EF1C138D70003BCB3C /* FriendsTableViewCell.m in Sources */,
 				19AD60E51C14CF0700A910FF /* City.m in Sources */,
 				19AD60E61C14CF0700A910FF /* Country.m in Sources */,
